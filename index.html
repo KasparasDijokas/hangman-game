@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Hangman</title>
+</head>
+<body>
+    <div class="main-container">
+        <h1>Hangman</h1>
+        <p>Find the hidden word - Enter a letter</p>
+
+        <div class="game-container">
+            <svg height="200" width="250" class="" >
+                <line x1="60" y1="20" x2="140" y2="20" class="svg-line"></line>
+                <line x1="140" y1="20" x2="140" y2="50" class="svg-line"></line>
+                <line x1="60" y1="20" x2="60" y2="250" class="svg-line"></line>
+
+                <circle cx="140" cy="70" r="20" class="svg-line body-part"></circle>
+                <line x1="140" y1="90" x2="140" y2="170" class="svg-line body-part"></line>
+                <line x1="140" y1="120" x2="180" y2="90" class="svg-line body-part"></line>
+                <line x1="140" y1="120" x2="100" y2="90" class="svg-line body-part"></line>
+                <line x1="140" y1="170" x2="180" y2="190" class="svg-line body-part"></line>
+                <line x1="140" y1="170" x2="100" y2="190" class="svg-line body-part"></line>
+            </svg>
+
+            <div class="wrong-letters" id="wrong-letters">
+                <p>Wrong letters: </p>
+                <div class="wrong" id="wrong">
+                </div>
+            </div>
+        </div>
+    </div> 
+    
+    <div class="word-container">
+        <div class="word" id="word"></div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-body">
+            <p class="modal-text">You lost</p>
+            <button class="play-again">Play again</button>
+        </div>
+    </div>
+
+    <div class="message" id="message">
+        <p>You already guessed this letter</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

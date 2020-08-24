@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: #34495e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.main-container {
+    width: 400px;
+}
+
+.main-container p {
+    text-align: center;
+    color: #fff;
+}
+
+.main-container h1 {
+    margin: 50px 0 0;
+    text-align: center;
+    color: #fff;
+} 
+
+.game-container {
+    position: relative;
+}
+
+.wrong-letters {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 150px;
+    max-width: 150px;
+}
+
+.wrong {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrong-letters p {
+    text-align: start;
+    width: 100%;
+}
+
+.wrong-letters span {
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #fff;
+    margin: 0 2px;
+    padding: 4px;
+    font-size: 18px;
+    width: 20px;
+}
+
+.word-container {
+    margin: 40px;
+}
+
+.word-container span {
+    margin: 0 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 0 8px;
+    font-size: 24px;
+    color: rgb(52, 101, 238);
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    min-height: 100vh;
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+.modal.show {
+    display: flex;
+}
+
+.modal-body {
+    background: #2980b9;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 120px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.message {
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+    padding: 0 40px 20px;
+    bottom: 0;
+    border-radius: 5px;
+    box-shadow: 0 15px 10px 3px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px);
+    transition: all .7s ease-in-out;
+}
+
+.message.show {
+    transform: translateY(0);
+}
+
+.play-again {
+    cursor: pointer;
+    background-color: #fff;
+    color: #2980b9;
+    border: 0;
+    margin-top: 20px;
+    padding: 6px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+  }
+
+.svg-line {
+    fill: transparent;
+    stroke: #fff;
+    stroke-width: 4px;
+    stroke-linecap: round;
+}
+
+.body-part {
+    display: none;
+}
+
+.body-part.show {
+    display: block;
+}
